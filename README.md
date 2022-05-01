@@ -1,6 +1,7 @@
 # FakeNewsDetection
 
-Capstone_Edit-1 = data cleaning,Text Analysis, Model Training \n
+Capstone_Edit-1 = data cleaning,Text Analysis, Model Training 
+<br /> 
 app.py = Flask
 data_web_Sceape = web scrapping of Politifact
 model.pkl = pickle file of gradient boost model(Trained)
