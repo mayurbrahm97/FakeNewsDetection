@@ -13,3 +13,5 @@ vectorizer.pickle = pickle file of vectorization
 Index = home page(HTML)
 <br /> 
 Datadet = https://docs.google.com/spreadsheets/d/1ojvpL0QOhXPDaFWG3oATX66F89X4iveV/edit?usp=sharing&ouid=113590384403221445382&rtpof=true&sd=true
+<br /> 
+Template = 
