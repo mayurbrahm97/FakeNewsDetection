@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Fact Check</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Siimple - v4.6.0
+  * Template URL: https://bootstrapmade.com/free-bootstrap-landing-page/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="container-fluid">
+
+      <div class="logo">
+        <h1><a href="index.html">Fact Check</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <button type="button" class="nav-toggle"><i class="bx bx-menu"></i></button>
+      <nav class="nav-menu">
+        <ul>
+          <li class="active"><a href="#header" class="scrollto">Home</a></li>
+          <li><a href="#about" class="scrollto">About Us</a></li>
+          <li><a href="#why-us" class="scrollto">Why Us</a></li>
+          <li><a href="#contact" class="scrollto">Contact Us</a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End #header -->
+
+  <!-- ======= Hero Section ======= -->
+  <style>
+		h1 {text-align: center; font-size: 60px;}
+		h2 {text-align: left;}
+		p {text-align: center;}
+<!--		div {id="11_1" text-align: center;}-->
+</style>
+  <section id="hero">
+    <div class="hero-container">
+      <h1>Welcome to Fact Checker</h1>
+
+      <h2>Please Enter the NEWS for Fact Check</h2>
+	  
+	  <form action="/test" method="POST">
+		<div id="11_1">
+<!--			<label for="statement"> Statement </label> -->
+			<br>
+			<textarea  name="statement" placeholder="write your statement here" rows="12" cols="100"></textarea>	
+		</div>
+		
+		<br>
+		
+		<div>
+			<input type="reset">
+		</div>
+		
+		<br>
+		
+		<div class="text-center">
+		 <button type="submit">Check</button>
+		
+		</div>
+		
+	  </form>
+<br>
+      <br>
+      <br>
+	  <div id="predict_content" class="content">
+            {{ predict_content }}
+        </div>
+
+		<!-- <form action="forms/notify.php" method="post" role="form" class="php-email-form">
+        <div class="row no-gutters">
+          <div class="col-md-6 form-group pr-md-1">
+            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+          </div>
+          <div class="col-md-6 form-group pl-md-1">
+            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+          </div>
+        </div>
+
+        <div class="my-3">
+          <div class="loading">Loading</div>
+          <div class="error-message"></div>
+          <div class="sent-message">Your notification request was sent. Thank you!</div>
+        </div>
+        <div class="text-center"><button type="submit">Notify me!</button></div>
+      </form> --->
+		
+	</div>
+  </section><!-- #hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <style>
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-6">
+            <img src="{{url_for('static', filename='about-img.jpg')}}" class="img-fluid" alt="" >
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <h3>About Us</h3>
+            <p class="fst-italic">
+				In this internet era, As an independent organization, We strive to bring light to the difference between reality and fake news by addressing statements issued by the public and for the public.
+              
+            </p>
+            <ul>
+              <li><i class="bx bx-check-double"></i> We are based in Windsor, Canada.</li>
+              <li><i class="bx bx-check-double"></i> We address and verify the statements to educate our readers on the real news.</li>
+              <li><i class="bx bx-check-double"></i> We work relentlessly with our sources before confirming the story.</li>
+			  <li><i class="bx bx-check-double"></i> Machine learning model integrated on our webpage detects the fake news and call it out.</li>
+            </ul>
+            <p>
+              We are a dedicated group of individuals who have taken the initiative to investigate the accuracy of statements made in the public interest or by the general public.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us section-bg">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="card">
+              <img src="{{url_for('static', filename='why-us-1.jpg')}}"  class="card-img-top" alt="...">
+              <div class="card-icon">
+                <i class="bx bx-book-reader"></i>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><a href="">Our Mission</a></h5>
+                <p class="card-text">As a fact-checker organization, we want to actively monitor social media, online news/print media and pick statements given by public figures, celebrities, government officials or any particular person in power and cross-check it for our fellow readers to authenticate or rebut the claim. We would address the issue and source to prove the point. Our mission is to apply our best practices to this. </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="card">
+              <img src= "{{url_for('static', filename='why-us-2.jpg')}}" class="card-img-top" alt="...">
+              <div class="card-icon">
+                <i class="bx bx-calendar-edit"></i>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><a href="">Our Plan</a></h5>
+                <p class="card-text">We plan on taking forward our fact-checking initiative to the levels of maximum reliability with our thorough research and knowledge.  Every piece of content will be reviewed by machine learning tools integrated on our page, only the factual statements will be approved, and notify of the debunks. We want to speak with data and facts to show a wider effect of statements issued and well inform about the situation.  </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="card">
+              <img src={{url_for('static', filename='why-us-3.jpg')}} class="card-img-top" alt="...">
+              <div class="card-icon">
+                <i class="bx bx-landscape"></i>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><a href="">Our Vision</a></h5>
+                <p class="card-text">Reducing deception in the world has been our biggest inspiration and motivation to provide the best of the services in our knowledge to fact-check every statement that comes across our webpage. In a world, which is working all over with the use of the internet, identifying and reviewing statements that may or may not directly/indirectly impact our lives seems to be of crucial importance.  </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+    <!-- ======= Frequenty Asked Questions Section ======= -->
+    <section class="faq">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Frequenty Asked Questions</h2>
+        </div>
+
+        <ul class="faq-list">
+
+          <li>
+            <a data-bs-toggle="collapse" class="collapsed" data-bs-target="#faq1">Why Fact checking is Important? <i class="bx bx-down-arrow-alt icon-show"></i><i class="bx bx-x icon-close"></i></a>
+            <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+              <p>
+                Several articles are published every day that can mislead people and spread antisocial messages or something that can harm society directly or indirectly. This fake news detection system can help people detect if the articles are fake, depending on that. Therefore, People can know If the articles can be forwarded or not for others to read and inform.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-bs-toggle="collapse" data-bs-target="#faq2" class="collapsed">How is this site different than existing fact-checking sites? <i class="bx bx-down-arrow-alt icon-show"></i><i class="bx bx-x icon-close"></i></a>
+            <div id="faq2" class="collapse" data-bs-parent=".faq-list">
+              <p>
+                Our website users may also see the most recent information about the primary source or term that is getting the fakest news and messages. <br>
+				Numerous websites claim to be able to solve the problem. However, certain low-accuracy machine learning classification approaches are employed. More robust algorithms and models would be used in the new method to improve the problem's accuracy and decrease errors.
+              </p>
+            </div>
+          </li>
+
+          
+
+        </ul>
+
+      </div>
+    </section><!-- End Frequenty Asked Questions Section -->
+
+<!--    &lt;!&ndash; ======= Contact Us Section ======= &ndash;&gt;-->
+<!--    <section id="contact" class="contact section-bg">-->
+<!--      <div class="container">-->
+
+<!--        <div class="section-title">-->
+<!--          <h2>Contact Us</h2>-->
+<!--        </div>-->
+
+<!--        <div class="row justify-content-center">-->
+
+<!--          <div class="col-lg-3 col-md-5 mb-5 mb-md-0">-->
+<!--            <div class="info">-->
+<!--              <div class="address">-->
+<!--                <i class="bx bx-map"></i>-->
+<!--                <p>St Clair College<br>Windsor Ontario</p>-->
+<!--              </div>-->
+
+<!--              <div class="email">-->
+<!--                <i class="bx bx-envelope"></i>-->
+<!--                <p>info@example.com</p>-->
+<!--              </div>-->
+
+<!--              <div class="phone">-->
+<!--                <i class="bx bx-phone-call"></i>-->
+<!--                <p>+1 5589 55488 55s</p>-->
+<!--              </div>-->
+<!--            </div>-->
+
+<!--            <div class="social-links">-->
+<!--              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>-->
+<!--              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>-->
+<!--              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>-->
+<!--              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>-->
+<!--            </div>-->
+
+<!--          </div>-->
+
+<!--          <div class="col-lg-5 col-md-7">-->
+<!--            <form action="forms/contact.php" method="post" role="form" class="php-email-form">-->
+<!--              <div class="form-group">-->
+<!--                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>-->
+<!--              </div>-->
+<!--              <div class="form-group mt-3">-->
+<!--                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>-->
+<!--              </div>-->
+<!--              <div class="form-group mt-3">-->
+<!--                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>-->
+<!--              </div>-->
+<!--              <div class="form-group mt-3">-->
+<!--                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>-->
+<!--              </div>-->
+<!--              <div class="my-3">-->
+<!--                <div class="loading">Loading</div>-->
+<!--                <div class="error-message"></div>-->
+<!--                <div class="sent-message">Your message has been sent. Thank you!</div>-->
+<!--              </div>-->
+<!--              <div class="text-center"><button type="submit">Send Message</button></div>-->
+<!--            </form>-->
+<!--          </div>-->
+
+<!--        </div>-->
+
+<!--      </div>-->
+<!--    </section>&lt;!&ndash; End Contact Us Section &ndash;&gt;-->
+
+<!--  </main>&lt;!&ndash; End #main &ndash;&gt;-->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+         <strong><span>Fact Check</span></strong>.
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-bootstrap-landing-page/ -->
+		<strong><span>Designed by</span></strong> <a>Group-15</a>
+		<br>
+		<br>
+		<strong><span>Guided by</span></strong> <a>Abiodun Sodiq Shofoluwe</a>
+      </div>
+    </div>
+  </footer><!-- End #footer -->
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
